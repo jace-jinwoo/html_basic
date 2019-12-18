@@ -2,126 +2,102 @@
 
 
 /* reset 영역 */
-@font-face {
+html, body, div, span, applet, object, iframe, h1, h2,
+h3, h4, h5, h6, ol, ul, li, p, pre, a, img, blockquote,
+abbr, acronym, address, big, cite, code, del, dfn,
+em, ins, kbd, q, s, samp, small, strike, strong, sub,
+sup, tt, var, b, u, i, center, dl, dt, dd, fieldset,
+form, label, legend, table, caption, thead, tbody, tfoot,
+tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, header, footer, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6, li, p, pre, a, address, strong,
+dt, dd, label, caption, th, td, figcaption {
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 }
-body, h1, h2, h3, h4, h5, h6, ul, p{
-  padding: 0;
-  margin: 0;
-}
-a{
-  text-decoration: none;
-}
-li{
-  list-style: none;
-}
+a{ text-decoration: none; }
+ol, ul{ list-style: none; }
 
 
 
 
 /* 실제 내용 스타일 영역 */
 /* header 영역 */
-.header{
-  background-color: #000;
-  width: 100%;
-  height: 120px;
-}
-div.head{
+.header{ background-color: #000; height: 120px; }
+.head{
   width: 1080px;
   margin: 0 auto;
   padding-left: 40px;
-  padding-top:29px;
   box-sizing: border-box;
 }
-div.head h1{
+.head .title{
   font-size: 40px;
   color: #fff;
-  font-weight: bold;
+  line-height: 120px;
 }
 
 
 
 
 /* contents 영역 */
-div.contents{
-  width: 1080px;
-  margin: 0 auto;
-}
-div.menu{
-  overflow: hidden;
-  padding: 40px;
-}
-div.menu ul{
-  overflow: hidden;
-}
-div.menu li{
+.contents{ width: 1080px; margin: 0 auto; }
+.menu{ overflow: hidden; padding: 40px; }
+.menu .menuList{ overflow: hidden; }
+.menu .listEle{
   border: 1px solid #d1d1d1;
   float: left;
   margin-right: 14px;
-  width: 297px;
+  width: 322px;
   height: 33px;
+  line-height: 33px;
   text-align: center;
-  padding-top: 5px;
-  box-sizing: border-box;
 }
-div.menu li:last-child{
-  margin-right: 0;
-}
-div.menu li:hover{
-  border-color: #454545;
-  font-weight: bold;
-}
-div.menu a{
+.menu .listEle:last-child{ margin-right: 0; }
+.menu .listEle:hover{ border-color: #454545; font-weight: bold; }
+.menu .linkEle{
   font-size: 16px;
   color: #000;
+  display: block;
 }
-
-div.component{
-  padding: 0 40px 40px;
-}
-div.component h2{
+.component{ padding: 0 40px 40px; }
+.component .cpnTitle{
   font-size: 20px;
   color: #000;
-  font-weight: bold;
   border-bottom: 1px solid #454545;
-  padding-bottom: 20px;
+  line-height: 60px;
 }
-section.element{
-  margin-top: 30px;
-}
-section.element h3{
+.element{ margin-top: 30px; }
+.element .eleTitle{
   font-size: 16px;
   color: #333;
-  font-weight: bold;
   background-color: #f7f7f7;
   border: 1px solid #d1d1d1;
   height: 46px;
+  line-height: 46px;
   padding-left: 15px;
-  padding-top: 9px;
-  box-sizing: border-box;
 }
-section.element p{
+.element .eleContents{
   font-size: 12px;
   color: #000;
   border: 1px solid #d1d1d1;
   border-top: none;
   padding: 30px;
-  box-sizing: border-box;
 }
 
 /* footer 영역 */
 .footer{
-  width: 100%;
   border-top: 1px solid #d1d1d1;
   text-align: center;
+  padding: 40px 0;
 }
 .footer .address{
   font-size: 12px;
   color: #999;
-  margin-top: 40px;
   margin-bottom: 10px;
 }
-.footer .copyright{
-  font-size: 12px;
-  color: #000;
-}
+.footer .copyright{ font-size: 12px; color: #000; }
