@@ -49,7 +49,7 @@ ol, ul{ list-style: none; }
 /* 상단 메뉴 영역 */
 .wrap_menu{ overflow: hidden; padding: 40px; }
 .menu{ overflow: hidden; }
-.list_table, .list_form, .list_list{
+.list_element{
   width: 322px;
   height: 33px;
   line-height: 33px;
@@ -58,13 +58,14 @@ ol, ul{ list-style: none; }
   float: left;
   text-align: center;
 }
-.list_list{ margin-right: 0; }
+.list_element:last-child{ margin-right: 0; }
 .list_element:hover{ border-color: #454545; font-weight: bold; }
-.link_table, .link_form, .link_list{
+.link_element{
   font-size: 16px;
   color: #000;
   display: block;
 }
+
 
 
 /* 구성요소 영역, 전체적인 스타일링 */
@@ -75,8 +76,8 @@ ol, ul{ list-style: none; }
   border-bottom: 1px solid #454545;
   line-height: 60px;
 }
-.area_table, .area_form, .area_list{ margin-top: 30px; border: 1px solid #c6c6c6;}
-.tb_title, .f_title, .lst_title{
+.area_element{ margin-top: 30px; border: 1px solid #c6c6c6;}
+.element_title{
   font-size: 16px;
   color: #333;
   background-color: #f7f7f7;
@@ -85,15 +86,12 @@ ol, ul{ list-style: none; }
   line-height: 46px;
   padding-left: 15px;
 }
-.wrap_table, .wrap_form, .wrap_article{ padding: 30px; }
-.ct_kidsize, .ct_check, .lgd_membership, .id, .pw, .name, .birth, .sex,
-.email, .phone, .hobby, .greeting{
+.wrap_element{ padding: 30px; }
+.ct_kidsize, .ct_check, .lgd_membership, .label, .dt_project, .tit_article{
   font-size: 14px;
   font-weight: bold;
 }
-.tit_dictionary, .dt_project, .tit_keyword, .tit_cookie, .tit_news, .tit_webtoon{
-  font-size: 14px;
-}
+
 
 
 /* 테이블 요소 영역, 전체저인 스타일링 */
@@ -150,28 +148,22 @@ ol, ul{ list-style: none; }
   background-color: #fbfbfb;
   padding: 20px;
 }
-.id, .pw, .name, .birth, .sex, .email, .phone, .hobby, .greeting{
-  display: inline-block;
-  margin: 18px 0 8px;
-}
-.id{ margin-top: 0;}
-.ip_id, .ip_pw, .ip_name, .ip_email, .ip_phone, .ip_authen{
+.label{ display: inline-block; margin: 18px 0 8px; }
+.wrap_membership > .label:first-child{ margin-top: 0;}
+.input{
   width: 894px;
   height: 30px;
   text-indent: 5px;
 }
 .ip_phone{ width: 738px; }
-.slt_year, .slt_month, .slt_day{
+.slt_birth{
   width: 293.5px;
   height: 30px;
   margin-left: 3px;
 }
-.slt_year{ margin-left: 0; }
-.ip_id, .ip_pw, .ip_name, .slt_year, .slt_month, .slt_day, .male, .female,
-.ip_email, .ip_phone, .ip_authen, .cb_hobby{
-  font-size: 12px;
-}
-.male, .female, .cb_hobby{ vertical-align: 3px; }
+.slt_birth:first-child{ margin-left: 0; }
+.input, .slt_birth, .namyeo, .cb_hobby{ font-size: 12px; }
+.namyeo, .cb_hobby{ vertical-align: 3px; }
 .male{ margin-right: 50px; }
 .btn_authen{
   float: right;
@@ -201,17 +193,24 @@ ol, ul{ list-style: none; }
   cursor: pointer;
 }
 
+
+
+
+
+
 /* 리스트 요소 영역, 전체적인 스타일링 */
-.wrap_project, .wrap_keyword, .wrap_cookie, .wrap_news, .wrap_webtoon{
+.wrap_arti{
   border: 1px solid #e4e4e4;
   margin: 10px 0 35px;
   padding: 20px;
 }
 
+
 /* 프로젝트 */
 .wrap_project{ padding: 40px 20px; }
 .tit_project{ font-size: 32px; text-align: center; }
 .dt_project{ margin-top: 20px; display: inline-block; }
+.dt_project:first-child{ margin-top: 40px;}
 .dd_definition{
   font-size: 12px;
   color: #559bfa;
@@ -280,17 +279,20 @@ ol, ul{ list-style: none; }
   display: block;
   clear: both;
 }
-.link_weather, .link_peach{ float:left; }
-.weather_title, .pet_title, .peach_title{
+.link_news{ float:left; }
+.news_title{
   font-size: 14px;
   color: #00c;
   text-decoration: underline;
   text-underline-position: under;
+  margin-left: 10px;
 }
-.weather_title, .peach_title{ margin-left: 10px; }
-.weather_content, .pet_content, .peach_content{ font-size: 12px; margin-top: 5px; }
-.weather_content, .peach_content{ margin-left: 90px; line-height: 18px; }
-.pet_content{ line-height: 18px; }
+.news_con{
+  font-size: 12px;
+  margin: 5px 0 0 90px;
+  line-height: 18px;
+}
+.pet_title, .pet_content{ margin-left: 0; }
 
 
 
