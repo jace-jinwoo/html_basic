@@ -21,9 +21,9 @@
         <!-- 상단 메뉴 영역 -->
         <div class="wrap_menu">
           <ul class="menu">
-            <li class="list_table list_element"><a href="#area_table" class="link_table">테이블 요소</a></li>
-            <li class="list_form list_element"><a href="#area_form" class="link_form">폼 요소</a></li>
-            <li class="list_list list_element"><a href="#area_list" class="link_list">리스트 요소</a></li>
+            <li class="list_element"><a href="#area_table" class="link_element">테이블 요소</a></li>
+            <li class="list_element"><a href="#area_form" class="link_element">폼 요소</a></li>
+            <li class="list_element"><a href="#area_list" class="link_element">리스트 요소</a></li>
           </ul>
         </div>
 
@@ -32,9 +32,9 @@
           <h2 class="cpn_title">구성 요소</h2>
 
             <!-- 테이블 요소 영역 -->
-            <section id="area_table" class="area_table">
-              <h3 class="tb_title">테이블 요소</h3>
-              <div class="wrap_table">
+            <section id="area_table" class="area_element">
+              <h3 class="element_title">테이블 요소</h3>
+              <div class="wrap_element">
                 <!-- 첫 번째 테이블(아동사이즈) -->
                 <table class="tb_kidsize" style="border-collapse: collapse;">
                   <caption class="ct_kidsize">아동 사이즈</caption>
@@ -177,53 +177,53 @@
 
 
             <!-- 폼 요소 영역 -->
-            <section id="area_form"  class="area_form">
-              <h3 class="f_title">폼 요소</h3>
-              <div class="wrap_form">
+            <section id="area_form"  class="area_element">
+              <h3 class="element_title">폼 요소</h3>
+              <div class="wrap_element">
                 <form>
                   <fieldset>
                     <legend class="lgd_membership">회원가입</legend>
                     <div class="wrap_membership">
-                      <label for="id" class="id">아이디</label><br />
-                      <input type="text" id="id" class="ip_id"/><br />
+                      <label for="id" class="label">아이디</label><br />
+                      <input type="text" id="id" class="input"/><br />
 
-                      <label for="pw" class="pw">비밀번호</label><br />
-                      <input type="password" id="pw" class="ip_pw"/><br />
+                      <label for="pw" class="label">비밀번호</label><br />
+                      <input type="password" id="pw" class="input"/><br />
 
-                      <label for="name" class="name">이름</label><br />
-                      <input type="text" id="name" class="ip_name"/><br />
+                      <label for="name" class="label">이름</label><br />
+                      <input type="text" id="name" class="input"/><br />
 
-                      <label class="birth">생년월일</label><br />
+                      <label class="label">생년월일</label><br />
                       <div class="wrap_birth">
-                        <select class="slt_year">
+                        <select class="slt_birth">
                           <option>년도</option>
                         </select>
-                        <select class="slt_month">
+                        <select class="slt_birth">
                           <option>월</option>
                         </select>
-                        <select class="slt_day">
+                        <select class="slt_birth">
                           <option>일</option>
                         </select>
                       </div>
 
-                      <label class="sex">성별</label><br />
+                      <label class="label">성별</label><br />
                       <div class="wrap_sex">
-                        <input type="radio" id="male" name="sex"><label for="male" class="male">남자</label>
-                        <input type="radio" id="female" name="sex"/><label for="female" class="female">여자</label><br />
+                        <input type="radio" id="male" name="sex"><label for="male" class="male namyeo">남자</label>
+                        <input type="radio" id="female" name="sex"/><label for="female" class="female namyeo">여자</label><br />
                       </div>
 
-                      <label for="email" class="email">이메일</label><br />
-                      <input type="email" id="email" class="ip_email" placeholder="이메일 주소에 '@'를 포함해주세요."/><br />
+                      <label for="email" class="label">이메일</label><br />
+                      <input type="email" id="email" class="input" placeholder="이메일 주소에 '@'를 포함해주세요."/><br />
 
-                      <label for="phone" class="phone">휴대전화</label><br />
+                      <label for="phone" class="label">휴대전화</label><br />
                       <div class="wrap_phone">
-                        <input type="tel" id="phone" class="ip_phone" placeholder="숫자만 입력해주세요" />
+                        <input type="tel" id="phone" class="ip_phone input" placeholder="숫자만 입력해주세요" />
                         <button type="button" class="btn_authen">인증번호 받기</button><br />
-                        <input type="text" class="ip_authen" placeholder="인증번호를 입력해주세요" />
+                        <input type="text" class="ip_authen input" placeholder="인증번호를 입력해주세요" />
                       </div>
 
 
-                      <label class="hobby">취미</label><br />
+                      <label class="label">취미</label><br />
                       <div class="wrap_hobby">
                         <input type="checkbox" id="exercise"/><label for="exercise" class="cb_hobby">운동</label>
                         <input type="checkbox" id="cook" /><label for="cook" class="cb_hobby">요리</label>
@@ -235,7 +235,7 @@
                         <input type="checkbox" id="reading" /><label for="reading" class="cb_hobby">독서</label>
                       </div>
 
-                      <label for="greeting" class="greeting">가입인사</label><br />
+                      <label for="greeting" class="label">가입인사</label><br />
                       <textarea id="greeting" rows="10" class="area_greeting"></textarea><br />
                       <button type="button" class="btn_membership">가입하기</button>
                     </div>
@@ -247,12 +247,12 @@
 
 
             <!-- 리스트 요소 영역 -->
-            <section id="area_list"  class="area_list">
-              <h3 class="lst_title">리스트 요소</h3>
-              <div class="wrap_article">
+            <section id="area_list"  class="area_element">
+              <h3 class="element_title">리스트 요소</h3>
+              <div class="wrap_element">
                 <article>
-                  <h4 class="tit_dictionary">'프로젝트' 사전 검색 결과</h4>
-                  <div class="wrap_project">
+                  <h4 class="tit_article">'프로젝트' 사전 검색 결과</h4>
+                  <div class="wrap_project wrap_arti">
                     <h5 class="tit_project">프로젝트</h5>
                     <dl>
                       <dt class="dt_project">프로젝트</dt><dd class="dd_definition">영양학사전</dd>
@@ -264,8 +264,8 @@
                 </article>
 
                 <article>
-                  <h4 class="tit_keyword">실시간 검색어</h4>
-                  <div class="wrap_keyword">
+                  <h4 class="tit_article">실시간 검색어</h4>
+                  <div class="wrap_keyword wrap_arti">
                     <ol>
                       <li class="rk_keyword"><span class="ranking">1</span><a href="" class="link_keyword">입추</a></li>
                       <li class="rk_keyword"><span class="ranking">2</span><a href="" class="link_keyword">런닝맨 유재석</a></li>
@@ -282,8 +282,8 @@
                 </article>
 
                 <article>
-                  <h4 class="tit_cookie">쿠키 이용안내</h4>
-                  <div class="wrap_cookie">
+                  <h4 class="tit_article">쿠키 이용안내</h4>
+                  <div class="wrap_arti">
                     <ul class="guide_cookie">
                       <li class="guide_content"><span class="wrap_strong">웹툰 작품</span>은 쿠키를 사용하여 대여/구매 하실 수 있습니다.</li>
                       <li class="guide_content">쿠키 구매 시 지급되는 보너스 쿠키의 수량은 변경될 수 있으며, <span class="wrap_available">유효기간은 지급 후 90일</span>입니다.</li>
@@ -295,29 +295,29 @@
                 </article>
 
                 <article>
-                  <h4 class="tit_news">뉴스</h4>
-                  <div class="wrap_news">
+                  <h4 class="tit_article">뉴스</h4>
+                  <div class="wrap_arti">
                     <ul>
                       <li class="news_content">
-                        <a href="" class="link_weather"><img src="image/thumbnail1.jpg" alt="내일의 날씨" /></a>
-                        <h5><a href="" class="weather_title">[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</a></h5>
-                        <p class="weather_content">
+                        <a href="" class="link_news"><img src="image/thumbnail1.jpg" alt="내일의 날씨" /></a>
+                        <h5><a href="" class="news_title">[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</a></h5>
+                        <p class="news_con">
                         오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 동해안을 제외한
                         전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 내일도 대기가 불안정해지
                         면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.
                         </p>
                       </li>
                       <li class="news_content">
-                        <h5><a href="" class="pet_title">[펫카드] 강아지 중성화가 필요한 이유</a></h5>
-                        <p class="pet_content">
+                        <h5><a href="" class="pet_title news_title">[펫카드] 강아지 중성화가 필요한 이유</a></h5>
+                        <p class="pet_content news_con">
                           (서울=뉴스1) 최서윤 기자,방은영 디자이너 = 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한
                           다. 그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.
                         </p>
                       </li>
                       <li class="news_content">
-                        <a href="" class="link_peach"><img src="image/thumbnail1.jpg" alt="복숭아" /></a>
-                        <h5><a href="" class="weather_title">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a></h5>
-                        <p class="peach_content">
+                        <a href="" class="link_news"><img src="image/thumbnail1.jpg" alt="복숭아" /></a>
+                        <h5><a href="" class="news_title">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a></h5>
+                        <p class="news_con">
                           복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 유기산(산성을 띠는 물질로 식품에서 신맛을 냄)이 0.
                           5% 정도로 적게 들어 단맛이 강하다. 복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 다이어트를
                           하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.
@@ -328,8 +328,8 @@
                 </article>
 
                 <article>
-                  <h4 class="tit_webtoon">웹툰</h4>
-                  <div class="wrap_webtoon">
+                  <h4 class="tit_article">웹툰</h4>
+                  <div class="wrap_webtoon wrap_arti">
                     <ul>
                       <li class="webtoons">
                         <a href="" class="link_webtoon">
