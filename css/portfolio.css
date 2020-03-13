@@ -20,22 +20,21 @@ h1, h2, h3, h4, h5, h6, li, p, pre, a, address, strong,
 dt, dd, label, caption, th, td, figcaption {
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 }
-a{ text-decoration: none; }
+a{ text-decoration: none; color: #000; }
 ol, ul{ list-style: none; }
 
 
 
-
-/* 실제 내용 스타일 영역 */
 /* header 영역 */
-.header{ background-color: #000; height: 120px; }
-.head{
+.header{ background-color: #000; height: 120px;}
+.wrap_title{
   width: 1080px;
   margin: 0 auto;
   padding-left: 40px;
   box-sizing: border-box;
 }
-.head .title{
+
+.title{
   font-size: 40px;
   color: #fff;
   line-height: 120px;
@@ -45,49 +44,278 @@ ol, ul{ list-style: none; }
 
 
 /* contents 영역 */
-.contents{ width: 1080px; margin: 0 auto; }
-.menu{ overflow: hidden; padding: 40px; }
-.menu .menuList{ overflow: hidden; }
-.menu .listEle{
-  border: 1px solid #d1d1d1;
-  float: left;
-  margin-right: 14px;
+.wrap_contents{ width: 1080px; margin: 0 auto; }
+
+/* 상단 메뉴 영역 */
+.wrap_menu{ overflow: hidden; padding: 40px; }
+.menu{ overflow: hidden; }
+.list_table, .list_form, .list_list{
   width: 322px;
   height: 33px;
   line-height: 33px;
+  border: 1px solid #d1d1d1;
+  margin-right: 14px;
+  float: left;
   text-align: center;
 }
-.menu .listEle:last-child{ margin-right: 0; }
-.menu .listEle:hover{ border-color: #454545; font-weight: bold; }
-.menu .linkEle{
+.list_list{ margin-right: 0; }
+.list_element:hover{ border-color: #454545; font-weight: bold; }
+.link_table, .link_form, .link_list{
   font-size: 16px;
   color: #000;
   display: block;
 }
-.component{ padding: 0 40px 40px; }
-.component .cpnTitle{
+
+
+/* 구성요소 영역, 전체적인 스타일링 */
+.wrap_components{ padding: 0 40px 40px; }
+.cpn_title{
   font-size: 20px;
   color: #000;
   border-bottom: 1px solid #454545;
   line-height: 60px;
 }
-.element{ margin-top: 30px; }
-.element .eleTitle{
+.area_table, .area_form, .area_list{ margin-top: 30px; border: 1px solid #c6c6c6;}
+.tb_title, .f_title, .lst_title{
   font-size: 16px;
   color: #333;
   background-color: #f7f7f7;
-  border: 1px solid #d1d1d1;
+  border-bottom: 1px solid #c6c6c6;
   height: 46px;
   line-height: 46px;
   padding-left: 15px;
 }
-.element .eleContents{
-  font-size: 12px;
-  color: #000;
-  border: 1px solid #d1d1d1;
-  border-top: none;
-  padding: 30px;
+.wrap_table, .wrap_form, .wrap_article{ padding: 30px; }
+.ct_kidsize, .ct_check, .lgd_membership, .id, .pw, .name, .birth, .sex,
+.email, .phone, .hobby, .greeting{
+  font-size: 14px;
+  font-weight: bold;
 }
+.tit_dictionary, .dt_project, .tit_keyword, .tit_cookie, .tit_news, .tit_webtoon{
+  font-size: 14px;
+}
+
+
+/* 테이블 요소 영역, 전체저인 스타일링 */
+.tb_kidsize, .tb_check{
+  width: 100%;
+  font-size: 12px;
+  color: #555;
+  background-color: #fbfbfb;
+}
+.ct_kidsize, .ct_check{
+  color: #000;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* 첫 번째 테이블(아동사이즈) */
+.tb_kidsize{ text-align: center; }
+.c_sex, .c_xlSize{ width: 18%; }
+.c_physical, .c_size{ width: 9%; }
+.tb_kidsize th, .tb_kidsize td{
+  border: 1px solid #e4e4e4;
+  padding: 10px 0;
+}
+.th_youngMan, .th_youngGirl{ vertical-align: middle; }
+
+
+/* 두 번째 테이블(환불가능금액조회) */
+.ct_check{ margin-top: 50px; }
+.c_division{ width: 36%;}
+.c_amount, .c_fee, .c_total{ width: 21%; }
+.tb_check th, .tb_check td{ padding: 10px 0; }
+.thead_check th, .tbody_check th{ font-weight: normal; }
+.tb_check td{ padding-right: 70px; text-align: right; }
+.thead_check{
+  border-top: 2px solid #a5a5a5;
+  border-bottom: 1px solid #e4e4e4;
+}
+.tfoot_check{
+  font-weight: bold;
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+
+
+
+
+/* 폼 요소 영역 */
+.lgd_membership{
+  margin-bottom: 15px;
+}
+.wrap_membership{
+  border: 1px solid #e4e4e4;
+  background-color: #fbfbfb;
+  padding: 20px;
+}
+.id, .pw, .name, .birth, .sex, .email, .phone, .hobby, .greeting{
+  display: inline-block;
+  margin: 18px 0 8px;
+}
+.id{ margin-top: 0;}
+.ip_id, .ip_pw, .ip_name, .ip_email, .ip_phone, .ip_authen{
+  width: 894px;
+  height: 30px;
+  text-indent: 5px;
+}
+.ip_phone{ width: 738px; }
+.slt_year, .slt_month, .slt_day{
+  width: 293.5px;
+  height: 30px;
+  margin-left: 3px;
+}
+.slt_year{ margin-left: 0; }
+.ip_id, .ip_pw, .ip_name, .slt_year, .slt_month, .slt_day, .male, .female,
+.ip_email, .ip_phone, .ip_authen, .cb_hobby{
+  font-size: 12px;
+}
+.male, .female, .cb_hobby{ vertical-align: 3px; }
+.male{ margin-right: 50px; }
+.btn_authen{
+  float: right;
+  border: 1px solid #08a600;
+  background-color: #4ec53d;
+  color: #fff;
+  width: 150px;
+  height: 36px;
+  cursor: pointer;
+}
+.ip_authen{ margin-top: 5px; }
+.cb_hobby{ margin-right: 60px; }
+.cb_hobby:last-child{ margin-right: 0; }
+.area_greeting{
+  width: 896px;
+  text-indent: 5px;
+  padding: 8px 0 0;
+}
+.btn_membership{
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: 1px solid #08a600;
+  background-color: #4ec53d;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 리스트 요소 영역, 전체적인 스타일링 */
+.wrap_project, .wrap_keyword, .wrap_cookie, .wrap_news, .wrap_webtoon{
+  border: 1px solid #e4e4e4;
+  margin: 10px 0 35px;
+  padding: 20px;
+}
+
+/* 프로젝트 */
+.wrap_project{ padding: 40px 20px; }
+.tit_project{ font-size: 32px; text-align: center; }
+.dt_project{ margin-top: 20px; display: inline-block; }
+.dd_definition{
+  font-size: 12px;
+  color: #559bfa;
+  margin-left: 3px;
+  display: inline-block;
+}
+.dd_description{
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 18px;
+}
+
+
+
+/* 실시간 검색어 */
+.wrap_keyword{ width: 200px; }
+.ranking{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 10px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 10px;
+  line-height: 15px;
+}
+.rk_keyword{ margin-top: 5px; }
+.rk_keyword:first-child{ margin-top: 0; }
+.link_keyword{ font-size: 12px; padding: 5px 5px 5px 0;}
+.link_keyword:hover{ text-decoration: underline; }
+
+
+
+/* 쿠키 이용안내 */
+.guide_cookie{
+  list-style: disc;
+  padding-left: 15px;
+  font-size: 12px;
+}
+.guide_content{ margin-top: 12px; }
+.guide_content:first-child{ font-weight: bold; margin-top: 0;}
+.wrap_strong{ color: #559bfa; }
+.wrap_available{ color: #ec5336; }
+.link_buying{ color: #559bfa; text-decoration: underline; }
+.link_stipulation{
+  display: inline-block;
+  color: #559bfa;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+
+
+/* 뉴스 */
+.news_content:nth-of-type(1){ padding-bottom: 20px; }
+.news_content:nth-of-type(2){
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 20px 0;
+}
+.news_content:nth-of-type(3){ padding-top: 20px; }
+.news_content::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.link_weather, .link_peach{ float:left; }
+.weather_title, .pet_title, .peach_title{
+  font-size: 14px;
+  color: #00c;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.weather_title, .peach_title{ margin-left: 10px; }
+.weather_content, .pet_content, .peach_content{ font-size: 12px; margin-top: 5px; }
+.weather_content, .peach_content{ margin-left: 90px; line-height: 18px; }
+.pet_content{ line-height: 18px; }
+
+
+
+/* 웹툰 */
+.wrap_webtoon{ overflow: hidden; }
+.webtoons{
+  width: 285px;
+  float: left;
+  margin-left: 20px;
+}
+.webtoons:nth-of-type(3n+1){ margin-left: 0; }
+.webtoons:nth-of-type(n+4){ margin-top: 20px; }
+.link_webtoon:hover{ text-decoration: underline; }
+.wt_title{ font-size: 14px; margin: 3px 0; }
+.wt_content{ font-size: 12px; }
+.cuttoon, .smarttoon{
+  font-size: 10px;
+  color: #fff;
+  margin: 4px 2px 0 0;
+  padding: 0 3px;
+  float:left;
+}
+.cuttoon{ border: 1px solid #71b036; background-color: #80c83d; }
+.smarttoon{ border: 1px solid #df4e28; background-color: #ec5336; }
+
 
 /* footer 영역 */
 .footer{
@@ -95,9 +323,9 @@ ol, ul{ list-style: none; }
   text-align: center;
   padding: 40px 0;
 }
-.footer .address{
+.address{
   font-size: 12px;
   color: #999;
   margin-bottom: 10px;
 }
-.footer .copyright{ font-size: 12px; color: #000; }
+.copyright{ font-size: 12px; color: #000; }
